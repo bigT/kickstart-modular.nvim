@@ -9,4 +9,4 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
 
 -- Spelling options sdfsdf sdfsf
 vim.opt.spelllang = 'en_us'
-vim.cmd 'highlight SpellBad gui=undercurl guisp=NvimDarkRed'
+vim.cmd 'highlight SpellBad gui=undercurl guisp=NvimLightMagenta'
