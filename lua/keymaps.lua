@@ -45,4 +45,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Custom key maps
+vim.keymap.set('n', '<leader>n', ':Neotree reveal right<CR>')
+
+-- Format current paragraph.
+vim.keymap.set('n', '<leader>ff', 'gqap')
+
+-- Spell suggestion
+vim.keymap.set('n', '<leader>fs', 'z=')
+
+-- Escape insert
+vim.keymap.set('i', 'kj', '<Esc>')
+
 -- vim: ts=2 sts=2 sw=2 et

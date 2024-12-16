@@ -62,4 +62,22 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 20
 
+-- Apply formatting to the file based on extension
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+  pattern = { '*.rs', '*.md' },
+  callback = function(ev)
+    -- vim.opt.colorcolumn = '101'
+    vim.opt.textwidth = 100
+    vim.opt.tabstop = 4
+    vim.opt.softtabstop = 4
+    vim.opt.expandtab = true
+    vim.opt.shiftwidth = 4
+  end,
+})
+
+-- Spelling options
+vim.opt.spelllang = 'en_us'
+vim.opt.spelloptions = {'camel', 'noplainbuffer'}
+vim.cmd 'highlight SpellBad gui=undercurl guisp=NvimLightMagenta'
+
 -- vim: ts=2 sts=2 sw=2 et
